@@ -14,3 +14,9 @@
 /log/*.log
 /tmp
 /*.un*
+*.swp
+*~
+.project
+.DS_Store
+bundle_stubs/
+
