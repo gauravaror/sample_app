@@ -16,6 +16,7 @@ group :development, :test do
   gem 'guard-rspec' , '1.2.1'
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
+  gem 'pg', '0.12.2'
 #  gem 'factory_girl_rails', '4.1.0'
 end
 
@@ -33,6 +34,8 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-inotify', '0.8.8'
   gem 'libnotify', '0.5.9'
+  gem 'cucumber-rails', '1.2.1'
+  gem 'database_cleaner', '0.7.0'
 
 end
 group :production do
