@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new()
   end
+
   
   def destroy
     User.find(params[:id]).destroy
@@ -20,6 +21,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page],:per_page => 5)
+
   end
 
   def create
@@ -51,9 +54,6 @@ class UsersController < ApplicationController
   end
 private
 
-  def signed_in_user
-    redirect_to signin_url, notice: "Please Sign in" unless signed_in?
-  end
 
   def correct_user
     redirect_to root_url,notice: "Not allowed to change someone else account" unless current_user?(@user)

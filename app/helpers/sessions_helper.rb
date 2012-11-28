@@ -24,6 +24,13 @@ module SessionsHelper
   def current_user?(user)
      user == current_user
   end
+  
+  def signed_in_user
+    redirect_to signin_url, notice: "Please Sign in" unless signed_in?
+  end
 
+  def feed
+    Micropost.where('user_id = ?',id);
+  end
 
 end

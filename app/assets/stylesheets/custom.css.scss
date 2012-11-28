@@ -116,14 +116,14 @@ footer {
   margin-top: 45px;
   @include box_sizing;
 }
-/*
-#profilearea {
+
+profilearea {
   clear: both;
   float: left;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-right: 10px;
 }
-*/
+
 aside {
   section {
     padding: 10px 0;
@@ -200,5 +200,35 @@ border-width: 1px;
 border-style: solid;
 float: left; 
 overflow: auto;
+}
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    float:left;
+    clear:both;
+
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
 
